@@ -1,16 +1,10 @@
 import {
-  UPDATE_FEED_SUCCESS, 
+  UPDATE_FEED_SUCCESS,
+  UPDATE_FEED_ERROR, 
   SET_SEARCH_QUERY,
-  UPDATE_SEARCH_QUERY,
-  UPDATE_SEARCH_QUERY_ARRAY,
-  DELETE_SEARCH_QUERY_ARRAY
 } from './../actions/feedActions';
 
-const initState ={
-  query:null,
-  queryString:null,
-  prevQueryString:null
-}
+const initState ={}
 
 export function feed(state = initState, action) {
   switch (action.type) {
@@ -19,33 +13,18 @@ export function feed(state = initState, action) {
         ...state,
         ...action.payload
       }
-    case UPDATE_SEARCH_QUERY:
+    case UPDATE_FEED_ERROR:
+      return{
+        ...state,
+        error:action.payload
+      }  
+    case SET_SEARCH_QUERY:
       return {
         ...state,
-        prevQueryString: state.queryString,
         queryString: action.payload
       }
-    case UPDATE_SEARCH_QUERY_ARRAY:
-      return{
-        ...state,
-        query:action.payload
-      }
-    case DELETE_SEARCH_QUERY_ARRAY:
-      const chipToDelete = action.payload
-      const newQuery = state.query.filter((chip) => chip.key !== chipToDelete)
-      return{
-        ...state,
-        query:newQuery
-      }      
+      
     default:
       return state
-  }
-}
-
-export function visibilityFilter(state = 'SHOW_ALL', action) {
-  if (action.type === 'SET_VISIBILITY_FILTER') {
-    return action.filter
-  } else {
-    return state
   }
 }

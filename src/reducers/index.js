@@ -1,8 +1,7 @@
 import {combineReducers} from 'redux';
-import {feed,visibilityFilter} from './feedReducer';
+import {feed} from './feedReducer';
 
 const rootReducer = combineReducers({
-  feed, 
-  visibilityFilter
+  feed
 })
 export default rootReducer;

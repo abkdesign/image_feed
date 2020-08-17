@@ -3,21 +3,28 @@
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
+  flex: 1;
+  margin-right: 15px;
+  /* align-items: flex-start; */
+  justify-content: flex-start;
+  /* align-content: flex-end; */
+  /* text-align: left; */
+  /* padding: 0px 20px; */
+  max-width: 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -36,4 +43,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+.tagInput__wrapper{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 48px;
+  flex:1;
+  padding: 0 8px;
+  margin: 20px;
+  border: 1px solid #d6d8da;
+  border-radius: 6px;
+  background: #fff;
+  margin-right: auto;
+  max-width: 40%;  
+}
+.tagInput__list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+.tagInput__item{
+  color: rgba(0, 0, 0, 0.87);
+    border: none;
+    cursor: default;
+    height: 32px;
+    display: inline-flex;
+    outline: 0;
+    padding: 8px;
+    font-size: 0.8125rem;
+    box-sizing: border-box;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    white-space: nowrap;
+    border-radius: 16px;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #e0e0e0;
+}
+.tagInput__tag{
+  text-overflow: ellipsis;
+  font-size: 10px;
+  text-align: left;
+}
+.tagInput__icon{
+  display: flex;
+  align-content: center;
+}
+.tagInput__wrapper input{
+  outline: none;
+  flex: 1;
+  border: none;
+  height: 46px;
+  font-size: 14px;
+  padding: 4px 0 0 0;
+  margin-left: 8px;
 }

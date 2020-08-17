@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Flicker Feed 
+
+Flickr public API https://www.flickr.com/services/feeds/
+App that displays the public feed images in either a grid view.
+The user can enter keywords in a search box and click on a search button and the app  displays images with the relevant tags.
+
 
 ## Available Scripts
 

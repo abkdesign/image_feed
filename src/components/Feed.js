@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Moment from 'react-moment';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,15 +33,15 @@ export default function Feed(props) {
               return(  
                 <Grid key={index} item xs={6} md={3} lg={2}>
                   <Paper className={classes.paper}>
-                    <h1 style={{fontSize:10}}>{item.title}</h1>
+                    <h1 style={{fontSize:14}}>{item.title}</h1>
+                    <h3>{item.m}</h3> 
                     <a href={item.link}>
                       <img src={item.media.m} />
                     </a>
-                    {item.m}
-                    <li>
-                      {item.tags}
-                    </li>
-                    {item.published}
+                     <h3 className="tagInput__tag">{item.tags}</h3>
+                     <Moment format='YYYY-MM-DD'>
+                       {new Date(item.published).toString()}
+                       </Moment>
                   </Paper>
                 </Grid>
               )
