@@ -58,7 +58,9 @@ export default function SearchBar(props) {
         })}
       </ul>
       <input
+        id="feedInput"
         type="text"
+        autoFocus
         placeholder="Search by tags"
         ref={searchInput}
         onKeyPress={(event)=>inputCallback(event)}
