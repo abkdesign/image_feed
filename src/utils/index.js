@@ -1,7 +1,7 @@
 import {isString} from './typeHelpers';
 import queryString from 'query-string';
 import axios from 'axios';
-const mainUrl = `https://www.flickr.com/services/feeds/photos_public.gne`
+const mainUrl = `http://localhost:8010/proxy/services/feeds/photos_public.gne`
 
 
 /**

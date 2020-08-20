@@ -30,7 +30,7 @@ export default function SearchBar(props) {
       const isNotDefined = newValue !== null &&  newValue !== "" 
       const isKeyboard = event.charCode === 13 || event.charCode === 32;
   
-      if(isNotDefined && isKeyboard  || isNotDefined && btnCharCode === 1000){
+      if((isNotDefined && isKeyboard ) || (isNotDefined  && btnCharCode === 1000)){
         let newValueObj = Object.assign({},{
           id: uuidv1(),
           label: newValue.trim()

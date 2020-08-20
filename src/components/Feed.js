@@ -36,7 +36,7 @@ export default function Feed(props) {
                     <h1 style={{fontSize:14}}>{item.title}</h1>
                     <h3>{item.m}</h3> 
                     <a href={item.link}>
-                      <img src={item.media.m} />
+                      <img src={item.media.m} alt="media"/>
                     </a>
                      <h3 className="tagInput__tag">{item.tags}</h3>
                      <Moment format='YYYY-MM-DD'>
