@@ -3,7 +3,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { v1 as uuidv1} from 'uuid';
 import Close from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
-
+import * as scss from './SearchBar.module.scss';
 export default function SearchBar(props) {
   const [tagData, setTagData] = React.useState([]);
   const searchInput = React.useRef(null); 
@@ -44,13 +44,13 @@ export default function SearchBar(props) {
     [ props,tagData],
   );
   return (  
-    <div className="tagInput__wrapper">
-      <ul className="tagInput__list">
+    <div className={scss.tagInput__wrapper}>
+      <ul className={scss.tagInput__list}>
         {tagData.map((tag,index)=>{
           return(
-            <li className="tagInput__item" key={tag.id}>
-              <span className="tagInput__title">{tag.label}</span>
-              <span className="tagInput__icon" onClick={()=>handleDelete(tag.id)}>
+            <li className={scss.tagInput__item} key={tag.id}>
+              <span className={scss.tagInput__title}>{tag.label}</span>
+              <span className={scss.tagInput__icon} onClick={()=>handleDelete(tag.id)}>
               <Close/>
               </span>
             </li>

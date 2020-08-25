@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { updatefeed,setSearchQuery} from "./actions/feedActions";
 import { shallowEqual, useSelector,useDispatch,} from 'react-redux';
-import SearchBar from './components/SearchBar';
-import Feed from './components/Feed';
+import SearchBar from './components/input/SearchBar';
+import Feed from './components/feed/Feed';
 
 function App() {
 

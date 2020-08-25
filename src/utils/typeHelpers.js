@@ -15,7 +15,7 @@ export function isBoolean (value) {
 export function isObject (value) {
   return value && typeof value === 'object' && value.constructor === Object ? true : undefined ;
 }
-// Returns if a value is an object
+// Returns if a value is a string
 export function isString (value) {
   return value && typeof value === 'string' && value.constructor === String ? true : undefined ;
 }
