@@ -21,7 +21,7 @@ export function* feedByTags({...args } = {}){
   // A comma delimited list of tags to filter the feed by.
   const feedQueryKeys = Object.assign({},{
     tags: query
-  })
+  });
 
   try {
     const feed = yield call(
